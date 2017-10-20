@@ -18,20 +18,18 @@ class patient(models.Model):
     pTimeOfSurgery = models.DateTimeField (default=timezone.now)
     kinName = models.CharField(max_length=150)
     relation = models.CharField(max_length=50)
-    pTimeOfDeath = models.DateTimeField(default=timezone.now)
-    nurseId = models.ForeignKey(nurse, on_delete=models.CASCADE)
-    bedId = models.ForeignKey(bedInfo, on_delete=models.CASCADE)
+    pTimeOfDeath = models.DateTimeField( blank=True, null=True)
+    #nurseId = models.ForeignKey(nurse, on_delete=models.CASCADE)
+    #bedId = models.ForeignKey(bedInfo, on_delete=models.CASCADE)
 
     def created(self):
-        self.pTimeOfAdmission = timezone.now()
         self.save()
 
     def updated(self):
-        self.pTimeOfAdmission = timezone.now()
         self.save()
 
     def __str__(self):
-        return self.patientId
+        return str(self.patientId)
 
 class nurse(models.Model):
     nurseId = models.AutoField(primary_key=True)
@@ -39,44 +37,55 @@ class nurse(models.Model):
     nLastName = models.CharField("Nurse's first name",max_length=100,default='Nurse last name')
     nAddress = models.CharField(max_length=250)
     nPhoneNo = models.CharField(max_length=12)
-    hospitalId = models.ForeignKey(hospital, on_delete=models.CASCADE)
-    adminId = models.ForeignKey(administrator, on_delete=models.CASCADE)
+    #hospitalId = models.ForeignKey(hospital, on_delete=models.CASCADE)
+    #adminId = models.ForeignKey(administrator, on_delete=models.CASCADE)
+    def created(self):
+        self.save()
 
     def __str__(self):
-        return self.nurseId
+        return str(self.nurseId)
 
 class bedInfo(models.Model):
     bedId = models.AutoField(primary_key=True)
     bedType = models.CharField(max_length=50)
     #hospitalId = models.ForeignKey(hospital, on_delete=models.CASCADE)
 
+    def created(self):
+        self.save()
 
     def __str__(self):
-        return self.bedId
+        return str(self.bedId)
 
 class hospital(models.Model):
     hospitalId = models.AutoField(primary_key=True)
     hospitalName = models.CharField(max_length=100)
     hospitalAddress = models.CharField(max_length=250)
     hospitalPhoneNo = models.CharField(max_length=12)
-    adminId = models.ForeignKey(administrator, on_delete=models.CASCADE)
+    #adminId = models.ForeignKey(administrator, on_delete=models.CASCADE)
+
+    def created(self):
+        self.save()
 
     def __str__(self):
-        return self.hospitalId
+        return str(self.hospitalId)
 
 class administrator(models.Model):
     adminId = models.AutoField(primary_key=True)
     adminName = models.CharField(max_length= 100)
 
+    def created(self):
+        self.save()
+
     def __str__(self):
-        return self.adminId
+        return str(self.adminId)
 
 
 class nurseBed(models.Model):
     nurseBedId = models.AutoField(primary_key=True)
-    nurseId = models.ForeignKey(nurse, related_name='nurseId')
-    bedId = models.ForeignKey(bedInfo, related_name='bedId')
-
+    #nurseId = models.ForeignKey(nurse, related_name='nurseId')
+    #bedId = models.ForeignKey(bedInfo, related_name='bedId')
+    def created(self):
+        self.save()
 
     def __str__(self):
-        return self.nurseBedId
+        return str(self.nurseBedId)

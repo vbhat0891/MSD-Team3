@@ -5,10 +5,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/emergencyBedTrackingSystem/db.sqlite3" afterPath="$PROJECT_DIR$/emergencyBedTrackingSystem/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/emergencyBedTrackingSystem/eBedTrack/admin.py" afterPath="$PROJECT_DIR$/emergencyBedTrackingSystem/eBedTrack/admin.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/emergencyBedTrackingSystem/eBedTrack/models.py" afterPath="$PROJECT_DIR$/emergencyBedTrackingSystem/eBedTrack/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/emergencyBedTrackingSystem/emergencyBedTrackingSystem/settings.py" afterPath="$PROJECT_DIR$/emergencyBedTrackingSystem/emergencyBedTrackingSystem/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/emergencyBedTrackingSystem/emergencyBedTrackingSystem/urls.py" afterPath="$PROJECT_DIR$/emergencyBedTrackingSystem/emergencyBedTrackingSystem/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/emergencyBedTrackingSystem/emergencyBedTrackingSystem/wsgi.py" afterPath="$PROJECT_DIR$/emergencyBedTrackingSystem/emergencyBedTrackingSystem/wsgi.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/emergencyBedTrackingSystem/manage.py" afterPath="$PROJECT_DIR$/emergencyBedTrackingSystem/manage.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,11 +15,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/emergencyBedTrackingSystem/eBedTrack/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="826">
-              <caret line="77" column="4" lean-forward="false" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="4" />
+            <state relative-caret-position="682">
+              <caret line="90" column="35" lean-forward="false" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
+              <caret line="90" column="31" lean-forward="true" selection-start-line="90" selection-start-column="31" selection-end-line="90" selection-end-column="31" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -31,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/emergencyBedTrackingSystem/eBedTrack/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="21" column="47" lean-forward="false" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
+            <state relative-caret-position="846">
+              <caret line="47" column="44" lean-forward="true" selection-start-line="47" selection-start-column="44" selection-end-line="47" selection-end-column="44" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -67,8 +64,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/emergencyBedTrackingSystem/eBedTrack/models.py" />
         <option value="$PROJECT_DIR$/emergencyBedTrackingSystem/eBedTrack/admin.py" />
+        <option value="$PROJECT_DIR$/emergencyBedTrackingSystem/eBedTrack/models.py" />
       </list>
     </option>
   </component>
@@ -79,10 +76,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="260" />
-    <option name="y" value="20" />
-    <option name="width" value="1400" />
-    <option name="height" value="990" />
+    <option name="x" value="952" />
+    <option name="width" value="976" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -213,22 +209,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/emergencyBedTrackingSystem/eBedTrack/models.py">
+    <entry file="file://$PROJECT_DIR$/emergencyBedTrackingSystem/eBedTrack/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="826">
-          <caret line="77" column="4" lean-forward="false" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="4" />
+        <state relative-caret-position="846">
+          <caret line="47" column="44" lean-forward="true" selection-start-line="47" selection-start-column="44" selection-end-line="47" selection-end-column="44" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/emergencyBedTrackingSystem/eBedTrack/admin.py">
+    <entry file="file://$PROJECT_DIR$/emergencyBedTrackingSystem/eBedTrack/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="47" lean-forward="false" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
+        <state relative-caret-position="682">
+          <caret line="90" column="35" lean-forward="false" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
+          <caret line="90" column="31" lean-forward="true" selection-start-line="90" selection-start-column="31" selection-end-line="90" selection-end-column="31" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
