@@ -1,49 +1,41 @@
 from django.contrib import admin
-from .models import patient,hospital, bedInfo, nurseBed, administrator, nurse
-
+from .models import Patient, Nurse, Hospital, Administrator, Bed
 # Register your models here.
-class PatientList(admin.ModelAdmin):
-    list_display = ('patientId','firstName','lastName','sex' )
-    list_filter = ('patientId','firstName','lastName','sex' )
-    search_fields =('firstName','lastName')
-    ordering = ['firstName']
 
+class PatientList(admin.ModelAdmin):
+    list_display = ('first_name', 'last_name', 'sex', 'time_of_admission', 'condition', 'bed_type')
+    list_filter = ('first_name', 'last_name')
+    search_fields = ('firstname', 'last_name')
+    ordering = ['first_name', 'last_name']
 
 class HospitalList(admin.ModelAdmin):
-    list_display = ('hospitalId', 'hospitalName', 'hospitalAddress', 'hospitalPhoneNo')
-    list_filter = ('hospitalId', 'hospitalName', 'hospitalAddress', 'hospitalPhoneNo')
-    search_fields = ('hospitalName', 'hospitalAddress', 'hospitalPhoneNo')
-    ordering = ['hospitalName']
+    list_display = ('hospital_name', 'address', 'phone_no')
+    list_filter = ('hospital_name', 'phone_no')
+    search_fields = ('hospital_name', 'address')
+    ordering = ['hospital_name']
 
 
 class NurseList(admin.ModelAdmin):
-    list_display = ('nurseId', 'nFirstName', 'nLastName')#, 'hospitalId')
-    list_filter = ('nurseId', 'nFirstName', 'nLastName')#, 'hospitalId')
-    search_fields = ( 'nFirstName', 'nLastName')#, 'hospitalId')
-    ordering = ['nFirstName']
+    list_display = ('first_name', 'last_name')
+    list_filter = ('first_name', 'last_name')
+    search_fields = ('nurse_id', 'first_name', 'last_name')
+    ordering = ['first_name', 'last_name']
 
-class bedInfoList(admin.ModelAdmin):
-    list_display = ('bedId', 'bedType')#, 'hospitalId')
-    list_filter = ('bedId', 'bedType')#,  'hospitalId')
-    search_fields = ('bedId', 'bedType')#,  'hospitalId')
-    ordering = ['bedType']
+class BedList(admin.ModelAdmin):
+    list_display = ('bed_id', 'bed_type')
+    list_filter = ('bed_id', 'bed_type')
+    search_fields = ('bed_id', 'bed_type')
+    ordering = ['bed_id']
 
-class administratorList(admin.ModelAdmin):
-    list_display = ('adminId', 'adminName')
-    list_filter = ('adminId', 'adminName')
-    search_fields = ('adminId', 'adminName')
-    ordering = ['adminName']
 
-#class nurseBedList(admin.ModelAdmin):
- #  list_display = ('nurseBedId', 'nurseId', 'bedId')
-  # list_filter = ('nurseBedId', 'nurseId', 'bedId')
-   #search_fields = ('nurseBedId', 'nurseId', 'bedId')
-   #ordering = ['nurseBedId']
+class AdminList(admin.ModelAdmin):
+    list_display = ('admin_id', 'admin_name')
+    list_filter = ('admin_id', 'admin_name')
+    search_fields = ('admin_id', 'admin_name')
+    ordering = ['admin_id']
 
-admin.site.register(patient, PatientList)
-admin.site.register(hospital, HospitalList)
-admin.site.register(nurse, NurseList)
-admin.site.register(bedInfo, bedInfoList)
-admin.site.register(administrator, administratorList)
-#admin.site.register(nurseBed, nurseBedList)
-
+admin.site.register(Patient, PatientList)
+admin.site.register(Nurse, NurseList)
+admin.site.register(Hospital, HospitalList)
+admin.site.register(Administrator)
+admin.site.register(Bed,BedList)
